@@ -1,0 +1,173 @@
+.cr {
+  padding: 16px;
+  flex: 1;
+}
+
+.tt {
+  font-size: 1.5rem;
+  margin: 8px 0 16px;
+  color: #111827;
+  font-weight: 700;
+  border-left: 4px solid #1F2937;
+  padding-left: 12px;
+}
+
+.vz {
+  text-align: center;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+}
+
+.vz a {
+  color: #1F2937;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #1F2937;
+}
+
+.ci {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 10px;
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.ci img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.ii {
+  flex: 2;
+  min-width: 120px;
+}
+
+.in {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.it {
+  color: #6B7280;
+  font-size: 0.8rem;
+}
+
+.ip {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 4px;
+  color: #111827;
+}
+
+.iq {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iq button {
+  background: #F3F4F6;
+  color: #1F2937;
+  width: 32px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+.iq button:hover {
+  background: #E5E7EB;
+}
+
+.iq span {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ir {
+  background: #FFFFFF;
+  color: #1F2937;
+  border: 1px solid #D1D5DB;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+.ir:hover {
+  background: #FEF2F2;
+  border-color: #FCA5A5;
+  color: #991B1B;
+}
+
+.rs {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.rs p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.rs .tl {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #E5E7EB;
+  color: #111827;
+}
+
+.bf {
+  background: #1F2937;
+  color: #FFFFFF;
+  border: 1px solid #1F2937;
+  padding: 12px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.bf:hover {
+  background: #111827;
+}
+
+@media(min-width: 600px) {
+  .ci {
+    flex-wrap: nowrap;
+  }
+  .ci img {
+    width: 90px;
+    height: 90px;
+  }
+}

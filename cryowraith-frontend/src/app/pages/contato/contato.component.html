@@ -1,0 +1,37 @@
+<section class="ct">
+  <div class="sc">
+    <h2>Informações</h2>
+    <div class="ii">📍 Rua dos Calçados, 456 - São Paulo, SP</div>
+    <div class="ii">📞 (11) 96666-7777</div>
+    <div class="ii">✉ contato&#64;cryowraith.com</div>
+    <div class="ii">⏰ Seg-Sáb: 9h às 19h</div>
+    <div class="ii">🏢 CNPJ: 98.765.432/0001-10</div>
+  </div>
+
+  <div class="sc">
+    <h2>Envie uma Mensagem</h2>
+    <div class="fg"><label>Nome</label><input [(ngModel)]="nome" placeholder="Seu nome"></div>
+    <div class="fg"><label>E-mail</label><input [(ngModel)]="email" placeholder="seu&#64;email.com"></div>
+    <div class="fg"><label>Assunto</label><input [(ngModel)]="assunto" placeholder="Assunto"></div>
+    <div class="fg"><label>Mensagem</label><textarea [(ngModel)]="mensagem" placeholder="Digite sua mensagem..."></textarea></div>
+    <button class="be" (click)="enviar()">Enviar Mensagem</button>
+  </div>
+
+  <div class="sc">
+    <h2>Termos de Uso</h2>
+    <div class="tgp">
+      <p><strong>Compras:</strong> Ao finalizar, você concorda com os preços.</p>
+      <p><strong>Frete grátis:</strong> Acima de R$199 em todo Brasil.</p>
+      <p><strong>Trocas:</strong> Em até 30 dias, sem uso e com etiqueta.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <h2>Privacidade</h2>
+    <div class="tgp">
+      <p><strong>Dados:</strong> Apenas para processar pedidos.</p>
+      <p><strong>Uso:</strong> Exclusivo para entregas.</p>
+      <p><strong>Segurança:</strong> Armazenados no servidor.</p>
+    </div>
+  </div>
+</section>

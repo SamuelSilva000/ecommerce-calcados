@@ -1,0 +1,11 @@
+<nav>
+  <a routerLink="/" class="logo">CRYO WRAITH</a>
+  <div class="nl">
+    <a routerLink="/">Home</a>
+    <a routerLink="/produtos">Calçados</a>
+    <a routerLink="/carrinho">Sacola</a>
+    <a *ngIf="logado" (click)="irParaPerfil()" class="bp" style="cursor:pointer">Perfil</a>
+    <button *ngIf="!logado" (click)="abrirLogin()">Entrar</button>
+    <button *ngIf="logado" (click)="logout()">Sair</button>
+  </div>
+</nav>

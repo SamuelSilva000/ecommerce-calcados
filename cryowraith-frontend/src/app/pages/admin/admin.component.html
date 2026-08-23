@@ -1,0 +1,75 @@
+<section class="ad">
+  <h1 class="tt">Painel Administrativo <button class="lo" (click)="logout()">Sair</button></h1>
+
+  <div class="tb">
+    <button [class.on]="aba === 'produtos'" (click)="trocarAba('produtos')">Produtos</button>
+    <button [class.on]="aba === 'usuarios'" (click)="trocarAba('usuarios')">Usuários</button>
+    <button [class.on]="aba === 'pedidos'" (click)="trocarAba('pedidos')">Pedidos</button>
+  </div>
+
+  <!-- Produtos -->
+  <div *ngIf="aba === 'produtos'">
+    <div *ngFor="let p of produtos" class="ai">
+      <div class="hd">
+        <div>
+          <strong>{{ p.nome }}</strong>
+          <div class="inf">R$ {{p.preco.toFixed(2) }} | {{ p.estoque }} unidades</div>
+          <div class="inf">{{ p.descricao }}</div>
+        </div>
+        <div class="acts">
+          <button class="ab" (click)="editar(p)">Editar</button>
+          <button class="ab r" (click)="removerProduto(p.nome)">Remover</button>
+        </div>
+      </div>
+    </div>
+    <button class="ab a" (click)="abrirNovo()">+ Adicionar Calçado</button>
+  </div>
+
+  <!-- Usuários -->
+  <div *ngIf="aba === 'usuarios'">
+    <div *ngIf="usuarios.length === 0" class="vz">Nenhum usuário</div>
+    <div *ngFor="let u of usuarios" class="ai">
+      <div class="hd">
+        <div>
+          <strong>{{ u.nome }}</strong>
+          <div class="inf">{{ u.email }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pedidos -->
+  <div *ngIf="aba === 'pedidos'">
+    <div *ngIf="pedidos.length === 0" class="vz">Nenhum pedido</div>
+    <div *ngFor="let p of pedidos; let i = index" class="oi">
+      <strong>Pedido #{{ p.id || (i+1) }}</strong>
+      <p>Cliente: {{ p.userEmail }}</p>
+      <p>Total: R$ {{p.total.toFixed(2) }}</p>
+      <p>Data: {{ p.data | date:'dd/MM/yyyy' }}</p>
+      <p>Itens: {{ getItensTexto(p.itens) }}</p>
+      <p>Status:
+        <select class="ss" [value]="p.status" (change)="atualizarStatus(p, $event)">
+          <option value="Em preparação">Em preparação</option>
+          <option value="Em rota de envio">Em rota de envio</option>
+          <option value="Entregue">Entregue</option>
+        </select>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Produto -->
+<div class="pm" [style.display]="modalProduto ? 'flex' : 'none'" (click)="modalProduto = false">
+  <div class="pmc" (click)="$event.stopPropagation()">
+    <span class="cl" (click)="modalProduto = false">&times;</span>
+    <h3>{{ editando ? '✏️ Editar' : '➕ Novo' }} Calçado</h3>
+    <input [(ngModel)]="pdNome" placeholder="Nome *">
+    <input [(ngModel)]="pdPreco" placeholder="Preço (R$ *)" type="number" step="0.01">
+    <input [(ngModel)]="pdDesc" placeholder="Descrição">
+    <input [(ngModel)]="pdImg" placeholder="Imagem (ex: calcado1.jpg)">
+    <input [(ngModel)]="pdEstoque" placeholder="Estoque *" type="number">
+    <input [(ngModel)]="pdTipo" placeholder="Tipo (ex: Tênis)">
+    <button (click)="salvarProduto()">Salvar</button>
+    <button (click)="modalProduto = false" style="background:#F3F4F6;color:#1F2937;border:1px solid #D1D5DB">Cancelar</button>
+  </div>
+</div>

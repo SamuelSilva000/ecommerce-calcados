@@ -1,0 +1,104 @@
+.md {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  backdrop-filter: blur(2px);
+}
+
+.mc {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  width: 100%;
+  max-width: 340px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.mc h3 {
+  color: #111827;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.mc input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #F9FAFB;
+  border: 1px solid #D1D5DB;
+  font-size: 0.9rem;
+  color: #1F2937;
+  border-radius: 6px;
+}
+
+.mc input:focus {
+  outline: none;
+  border-color: #6B7280;
+}
+
+.mc button {
+  background: #1F2937;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.mc button:hover {
+  background: #111827;
+}
+
+.cl {
+  float: right;
+  font-size: 1.6rem;
+  color: #6B7280;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cl:hover {
+  color: #111827;
+}
+
+.tb {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  background: #F3F4F6;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.tb button {
+  background: none;
+  border: none;
+  padding: 7px 14px;
+  font-weight: 600;
+  color: #6B7280;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 6px;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.tb button.on {
+  background: #FFFFFF;
+  color: #111827;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}

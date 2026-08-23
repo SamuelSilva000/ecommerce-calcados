@@ -1,0 +1,171 @@
+.dtl {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ia {
+  width: 100%;
+  text-align: center;
+}
+
+.ia img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  background: #FFFFFF;
+}
+
+.ib {
+  width: 100%;
+}
+
+.nm {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.ds {
+  color: #6B7280;
+  margin: 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pr {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 8px 0;
+}
+
+.sk {
+  color: #374151;
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  background: #F3F4F6;
+  display: inline-block;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+}
+
+.tz {
+  margin-bottom: 16px;
+}
+
+.tz label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.to {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tsz {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  color: #374151;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.tsz.on {
+  background: #1F2937;
+  color: #FFFFFF;
+  border-color: #1F2937;
+}
+
+.qt {
+  margin-bottom: 16px;
+}
+
+.qt label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.qt input {
+  width: 70px;
+  padding: 8px 10px;
+  border: 1px solid #D1D5DB;
+  font-size: 0.9rem;
+  background: #FFFFFF;
+  color: #1F2937;
+  border-radius: 6px;
+}
+
+.bc {
+  background: #1F2937;
+  color: #FFFFFF;
+  border: 1px solid #1F2937;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.bc:hover {
+  background: #111827;
+}
+
+.ba {
+  background: #FFFFFF;
+  color: #1F2937;
+  border: 1px solid #D1D5DB;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.ba:hover {
+  background: #F3F4F6;
+}
+
+@media(min-width: 600px) {
+  .dtl {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 24px 5%;
+  }
+  .ia {
+    width: 45%;
+  }
+  .ia img {
+    max-width: 100%;
+  }
+  .ib {
+    width: 55%;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="pm" [style.display]="visivel ? 'flex' : 'none'" (click)="fechar()">
+  <div class="pmc" (click)="$event.stopPropagation()">
+    <p>{{ mensagem }}</p>
+    <div *ngIf="mostrarInput" style="margin-bottom:10px">
+      <input [(ngModel)]="valorInput" [placeholder]="inputPlaceholder" style="width:100%;padding:10px;border:1px solid #D1D5DB;font-size:0.9rem;border-radius:6px">
+    </div>
+    <button (click)="ok()">{{ textoOk }}</button>
+    <button *ngIf="mostrarCancelar" (click)="cancelar()" style="background:#F3F4F6;color:#1F2937;border:1px solid #D1D5DB">{{ textoCancelar }}</button>
+  </div>
+</div>

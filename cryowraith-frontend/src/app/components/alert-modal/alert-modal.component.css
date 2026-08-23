@@ -1,0 +1,47 @@
+.pm {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  backdrop-filter: blur(2px);
+}
+
+.pmc {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.pmc p {
+  margin-bottom: 12px;
+  color: #1F2937;
+  font-size: 0.9rem;
+}
+
+.pmc button {
+  background: #1F2937;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.pmc button:hover {
+  background: #111827;
+}

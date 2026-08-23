@@ -1,0 +1,173 @@
+.ck {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tt {
+  font-size: 1.5rem;
+  margin: 8px 0 16px;
+  color: #111827;
+  font-weight: 700;
+  border-left: 4px solid #1F2937;
+  padding-left: 12px;
+}
+
+.sc {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+.sc h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.fg {
+  margin-bottom: 14px;
+}
+
+.fg label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.fg input, .fg select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D1D5DB;
+  background: #F9FAFB;
+  font-size: 0.9rem;
+  color: #1F2937;
+  border-radius: 6px;
+}
+
+.fr {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fr .fg {
+  flex: 1;
+  min-width: 80px;
+}
+
+.bc {
+  background: #F3F4F6;
+  color: #1F2937;
+  border: 1px solid #D1D5DB;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.po {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.po label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.rp {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ri {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.rt {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.rt .ln {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.rt .fb {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #E5E7EB;
+  color: #111827;
+}
+
+.bf {
+  background: #1F2937;
+  color: #FFFFFF;
+  border: 1px solid #1F2937;
+  padding: 14px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.bf:hover {
+  background: #111827;
+}
+
+.frt {
+  background: #F0FDF4;
+  color: #065F46;
+  padding: 8px 12px;
+  border: 1px solid #A7F3D0;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+@media(min-width: 600px) {
+  .ck {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .cf {
+    flex: 2;
+  }
+  .cr2 {
+    flex: 1;
+  }
+}

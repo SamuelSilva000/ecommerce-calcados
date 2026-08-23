@@ -1,0 +1,26 @@
+<section class="dtl" *ngIf="produto">
+  <div class="ia">
+    <img [src]="produto.imagem" [alt]="produto.nome">
+  </div>
+  <div class="ib">
+    <h1 class="nm">{{ produto.nome }}</h1>
+    <p class="ds">{{ produto.descricao }}</p>
+    <div class="pr">R$ {{ produto.preco.toFixed(2) }}</div>
+    <div class="sk">{{ produto.estoque }} unidades disponíveis</div>
+
+    <div class="tz">
+      <label>Tamanho:</label>
+      <div class="to">
+        <button *ngFor="let t of tamanhos" class="tsz" [class.on]="tamanhoSelecionado === t" (click)="selecionarTamanho(t)">{{ t }}</button>
+      </div>
+    </div>
+
+    <div class="qt">
+      <label>Quantidade:</label>
+      <input type="number" [(ngModel)]="quantidade" min="1" [max]="produto?.estoque">
+    </div>
+
+    <button class="bc" (click)="adicionar()">Comprar Agora</button>
+    <button class="ba" (click)="adicionar()">Adicionar ao Carrinho</button>
+  </div>
+</section>

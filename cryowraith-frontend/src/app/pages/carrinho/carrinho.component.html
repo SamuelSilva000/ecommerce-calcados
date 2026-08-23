@@ -1,0 +1,32 @@
+<section class="cr">
+  <h1 class="tt">Minha Sacola</h1>
+
+  <div *ngIf="itens.length === 0" class="vz">
+    <p>Sua sacola está vazia</p>
+    <p style="margin-top:10px"><a routerLink="/produtos">Ver calçados →</a></p>
+  </div>
+
+  <div *ngFor="let item of itens; let i = index" class="ci">
+    <img [src]="item.img" [alt]="item.nome">
+    <div class="ii">
+      <div class="in">{{ item.nome }}</div>
+      <div class="it">Tamanho: {{ item.tamanho || 'Único' }}</div>
+      <div class="ip">R$ {{ item.preco.toFixed(2) }}</div>
+    </div>
+    <div class="iq">
+      <button (click)="diminuir(i)">−</button>
+      <span>{{ item.qtd }}</span>
+      <button (click)="aumentar(i)">+</button>
+    </div>
+    <button class="ir" (click)="remover(i)">Remover</button>
+  </div>
+
+  <div *ngIf="itens.length > 0" id="rsC">
+    <div class="rs">
+      <p><span>Subtotal ({{ quantidade }} itens):</span><span>R$ {{ subtotal.toFixed(2) }}</span></p>
+      <p><span>Frete:</span><span>Calculado no checkout</span></p>
+      <p class="tl"><span>Total:</span><span>R$ {{ subtotal.toFixed(2) }}</span></p>
+      <button class="bf" (click)="finalizar()">Finalizar Compra →</button>
+    </div>
+  </div>
+</section>

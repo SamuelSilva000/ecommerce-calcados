@@ -1,0 +1,27 @@
+<div class="md" [style.display]="visivel ? 'flex' : 'none'" (click)="fechar()">
+  <div class="mc" (click)="$event.stopPropagation()">
+    <span class="cl" (click)="fechar()">&times;</span>
+    <h3>Acessar</h3>
+    <div class="tb">
+      <button [class.on]="aba === 'login'" (click)="aba = 'login'; mensagemErro = ''">Login</button>
+      <button [class.on]="aba === 'registro'" (click)="aba = 'registro'; mensagemErro = ''">Registro</button>
+    </div>
+
+    <div *ngIf="aba === 'login'">
+      <input [(ngModel)]="email" placeholder="Email">
+      <input [(ngModel)]="senha" type="password" placeholder="Senha">
+      <button (click)="fazerLogin()">Entrar</button>
+    </div>
+
+    <div *ngIf="aba === 'registro'">
+      <input [(ngModel)]="nome" placeholder="Nome">
+      <input [(ngModel)]="email" placeholder="Email">
+      <input [(ngModel)]="senha" type="password" placeholder="Senha">
+      <input [(ngModel)]="confirmarSenha" type="password" placeholder="Confirmar">
+      <button (click)="fazerRegistro()">Criar Conta</button>
+    </div>
+
+    <p *ngIf="mensagemErro" style="color:#DC2626;margin-top:10px;font-size:0.8rem;text-align:center">{{ mensagemErro }}</p>
+    <div style="margin-top:10px;text-align:center;font-size:0.75rem;color:#6B7280">admin&#64;cryowraith.com / 123456</div>
+  </div>
+</div>
